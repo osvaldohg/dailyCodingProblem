@@ -5,9 +5,9 @@
 
 def solution(numbers):
     exc=0
-    inc=numbers[0]
+    inc=0
 
-    for i in range(1,len(numbers)):
+    for i in range(0,len(numbers)):
         temp=inc
         inc=max(exc+numbers[i],inc)
         exc=temp
@@ -15,6 +15,7 @@ def solution(numbers):
     return inc
 
 
-print solution([2,4,6,2,5])#13
+print solution([-2,4,6,2,5])#13
 print solution([5,1,1,5])#10
 print solution([5,5,10,100,10,5])#110
+print solution ( [-5, -5, -5, 10, -5])#10
